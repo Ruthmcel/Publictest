@@ -57,22 +57,10 @@ week_start_day: sunday
 
 case_sensitive: no
 
-explore: store {
-  fields: [
-    ALL_FIELDS*,
-    -store_setting.explore_rx_store_setting_4_10_candidate_list*
-  ]
-  extends: [store_base]
-  #access_filter_fields: [chain.chain_id]
-  #[ERXLPS-931] - Added Chain user attribute
-  access_filter: {
-    field: chain.chain_id
-    user_attribute: allowed_chain
-  }
+explore: store { 
 }
 
 explore: master_code {
-  extends: [master_code_base]
 }
 
 explore: looker_data_dictionary {
