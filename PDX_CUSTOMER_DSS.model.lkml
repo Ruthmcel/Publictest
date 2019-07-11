@@ -15,6 +15,8 @@ include: "explore.base_sales"
 include: "edx_tmpl_chain*.dashboard" #[ERXDWPS-6087] - include all standard template dashboards.
 include: "explore.base_turnrx"
 
+case_sensitive: no
+
 # ERXDWPS-5795 Changes
 access_grant: can_view_genrx_specific_fields {
   user_attribute: allowed_chain
