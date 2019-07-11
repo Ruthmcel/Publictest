@@ -15,7 +15,7 @@ include: "explore.base_sales"
 include: "edx_tmpl_chain*.dashboard" #[ERXDWPS-6087] - include all standard template dashboards.
 include: "explore.base_turnrx"
 
-case_sensitive: no
+idd
 
 # ERXDWPS-5795 Changes
 access_grant: can_view_genrx_specific_fields {
@@ -151,7 +151,7 @@ explore: eps_patient {
 }
 
 explore: rx_tx {
-  hidden: yes    #[ERXLPS-6238] - Hide Prescription Transaction and Third Party Claim explorers from the Customer Decision Support Model
+       #[ERXLPS-6238] - Hide Prescription Transaction and Third Party Claim explorers from the Customer Decision Support Model
   fields: [
     ALL_FIELDS*,
     -rx_tx.chain_id,
@@ -1271,7 +1271,7 @@ explore: store_central_fill {
     user_attribute: allowed_fiscal_chain
   }
 
-#   hidden: yes #[ERXDWPS-9488] Exposed in Customer Model for QA testing.
+#     #[ERXDWPS-9488] Exposed in Customer Model for QA testing.
 
   fields: [ALL_FIELDS*,
     -store_central_fill.central_fill_check_in_user_initials_deidentified,
@@ -1340,3 +1340,5 @@ explore: store_workflow_token_direct_stage_consumption {
   required_access_grants: [can_view_workflow_token_explore]
   persist_with: customer_eps_stage_cache_info
 }
+
+
