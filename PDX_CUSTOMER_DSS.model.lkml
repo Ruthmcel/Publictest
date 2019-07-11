@@ -16,7 +16,6 @@ include: "edx_tmpl_chain*.dashboard" #[ERXDWPS-6087] - include all standard temp
 include: "explore.base_turnrx"
 
 
-
 # ERXDWPS-5795 Changes
 access_grant: can_view_genrx_specific_fields {
   user_attribute: allowed_chain
@@ -566,7 +565,7 @@ explore: sales {
 }
 
 explore: tx_tp {
-  hidden:  yes  #[ERXLPS-6238] - Hide Prescription Transaction and Third Party Claim explorers from the Customer Decision Support Model
+    #[ERXLPS-6238] - Hide Prescription Transaction and Third Party Claim explorers from the Customer Decision Support Model
   extends: [tx_tp_base]
   #access_filter_fields: [chain.chain_id]
   #[ERXLPS-931] - Added Chain user attribute
