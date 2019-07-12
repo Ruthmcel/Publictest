@@ -3,7 +3,7 @@
 label: "Enterprise Decision Support System - DEVQA"
 
 #connection: "snowflake_qa" # [ERX-8034] Connection temporarily changed to QA
-connection: "snowflake_prod_support" #[ERXDWPS-6368] Connection changed to production support
+connection: "thelook" #[ERXDWPS-6368] Connection changed to production support
 
 
 include: "*.view"
