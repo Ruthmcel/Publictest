@@ -1,4 +1,4 @@
-connection: "snowflake_absolute_ar"
+connection: "thelook"
 
 # include the base lookml file if not a view file
 include: "explore.base_ar_dss"
