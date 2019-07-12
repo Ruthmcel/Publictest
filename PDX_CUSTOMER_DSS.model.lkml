@@ -15,7 +15,6 @@ include: "explore.base_sales"
 include: "edx_tmpl_chain*.dashboard" #[ERXDWPS-6087] - include all standard template dashboards.
 include: "explore.base_turnrx"
 
-
 # ERXDWPS-5795 Changes
 access_grant: can_view_genrx_specific_fields {
   user_attribute: allowed_chain
@@ -58,10 +57,22 @@ week_start_day: sunday
 
 case_sensitive: no
 
-explore: store { 
+explore: store {
+  fields: [
+    ALL_FIELDS*,
+    -store_setting.explore_rx_store_setting_4_10_candidate_list*
+  ]
+  extends: [store_base]
+  #access_filter_fields: [chain.chain_id]
+  #[ERXLPS-931] - Added Chain user attribute
+  access_filter: {
+    field: chain.chain_id
+    user_attribute: allowed_chain
+  }
 }
 
 explore: master_code {
+  extends: [master_code_base]
 }
 
 explore: looker_data_dictionary {
@@ -150,7 +161,7 @@ explore: eps_patient {
 }
 
 explore: rx_tx {
-       #[ERXLPS-6238] - Hide Prescription Transaction and Third Party Claim explorers from the Customer Decision Support Model
+  hidden: yes    #[ERXLPS-6238] - Hide Prescription Transaction and Third Party Claim explorers from the Customer Decision Support Model
   fields: [
     ALL_FIELDS*,
     -rx_tx.chain_id,
@@ -565,7 +576,7 @@ explore: sales {
 }
 
 explore: tx_tp {
-    #[ERXLPS-6238] - Hide Prescription Transaction and Third Party Claim explorers from the Customer Decision Support Model
+  hidden:  yes  #[ERXLPS-6238] - Hide Prescription Transaction and Third Party Claim explorers from the Customer Decision Support Model
   extends: [tx_tp_base]
   #access_filter_fields: [chain.chain_id]
   #[ERXLPS-931] - Added Chain user attribute
@@ -1270,7 +1281,7 @@ explore: store_central_fill {
     user_attribute: allowed_fiscal_chain
   }
 
-#     #[ERXDWPS-9488] Exposed in Customer Model for QA testing.
+#   hidden: yes #[ERXDWPS-9488] Exposed in Customer Model for QA testing.
 
   fields: [ALL_FIELDS*,
     -store_central_fill.central_fill_check_in_user_initials_deidentified,
@@ -1336,7 +1347,6 @@ explore: store_workflow_token_direct_stage_consumption {
     field: chain.chain_id
     user_attribute: allowed_chain
   }
-    persist_with: customer_eps_stage_cache_info
+  required_access_grants: [can_view_workflow_token_explore]
+  persist_with: customer_eps_stage_cache_info
 }
-
-
