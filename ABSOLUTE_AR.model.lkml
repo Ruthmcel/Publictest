@@ -1,6 +1,6 @@
 label: "Absolute AR"
 
-connection: "snowflake_absolute_ar"
+connection: "thelook"
 
 # include all views in this project
 include: "ar_*.view"
