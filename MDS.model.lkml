@@ -1,6 +1,6 @@
 label: "Manufacturer Data Services"
 
-connection: "snowflake"
+connection: "thelook"
 
 # include all the views
 include: "*.view"
