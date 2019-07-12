@@ -1,6 +1,6 @@
 label: "Predictive Analytics POC"
 
-connection: "snowflake_predictive_analytics_poc"
+connection: "thelook"
 
 # include all views in this project
 include: "poc_*.view"
