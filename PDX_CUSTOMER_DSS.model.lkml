@@ -2,7 +2,7 @@
 
 label: "Customer Decision Support System"
 
-connection: "snowflake"
+connection: "thelook"
 
 include: "*.view"
 
