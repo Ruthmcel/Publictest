@@ -3,7 +3,7 @@
 
 label: "Demo"
 
-connection: "snowflake"
+connection: "thelook"
 
 include: "*.view"
 
