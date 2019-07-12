@@ -1,6 +1,6 @@
 label: "Business Intelligence Operations"
 
-connection: "snowflake"
+connection: "thelook"
 
 # include all views in this project
 include: "*.view"
