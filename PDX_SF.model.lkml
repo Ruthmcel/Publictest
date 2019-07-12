@@ -2,7 +2,7 @@
 
 label: "Enterprise Decision Support System"
 
-connection: "snowflake"
+connection: "thelook"
 
 include: "*.view"
 
