@@ -1,6 +1,6 @@
 label: "Data Quality"
 
-connection: "snowflake"
+connection: "thelook"
 
 # include below listed views in this model. #[ERXLPS-6444][ERXDWPS-5122]
 include: "dq_*.view"
