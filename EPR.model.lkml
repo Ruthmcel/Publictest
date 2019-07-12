@@ -1,6 +1,6 @@
 label: "Enterprise Pharmacy Record"
 
-connection: "oracle_epr"
+connection: "thelook"
 
 # include all the views
 include: "*.view"
