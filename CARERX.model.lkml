@@ -1,6 +1,6 @@
 label: "Care Rx"
 
-connection: "oracle_carerx"
+connection: "thelook"
 
 # include all the views
 include: "*.view"
