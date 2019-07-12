@@ -1,7 +1,7 @@
 #X# Note: failed to preserve comments during New LookML conversion
 label: "Central Inventory System - DEVQA"
 
-connection: "snowflake_turn_rx_prod"
+connection: "thelook"
 
 include: "*.view"
 
