@@ -1,4 +1,4 @@
-connection: "snowflake_carerx"
+connection: "thelook"
 
 # include the base lookml file if not a view file
 include: "explore.base_carerx_dss"
