@@ -1,6 +1,6 @@
 label: "EPS Events Using AVRO"
 
-connection: "snowflake_qa"
+connection: "thelook"
 
 # include all the views
 include: "avro_*.view"
