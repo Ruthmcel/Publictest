@@ -1336,8 +1336,7 @@ explore: store_workflow_token_direct_stage_consumption {
     field: chain.chain_id
     user_attribute: allowed_chain
   }
-  required_access_grants: [can_view_workflow_token_explore]
-  persist_with: customer_eps_stage_cache_info
+    persist_with: customer_eps_stage_cache_info
 }
 
 
