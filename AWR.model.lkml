@@ -1,6 +1,6 @@
 label: "Automatic Workload Repository"
 
-connection: "oracle_epr"
+connection: "thelook"
 
 # include all the views
 include: "awr_*.view"
